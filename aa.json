@@ -1,0 +1,37 @@
+{
+    "userId": 1,
+    "coordinates": [38.765412, 9.032137],
+    "properties": {
+      "id": "node/11034209866",
+      "gid": "openstreetmap:venue:node/11034209866",
+      "layer": "venue",
+      "source": "openstreetmap",
+      "source_id": "node/11034209866",
+      "country_code": "ET",
+      "name": "Arat Kilo",
+      "confidence": 1,
+      "match_type": "exact",
+      "distance": 189.95,
+      "accuracy": "point",
+      "country": "Ethiopia",
+      "country_gid": "whosonfirst:country:85632257",
+      "country_a": "ETH",
+      "region": "Addis Ababa",
+      "region_gid": "whosonfirst:region:85671149",
+      "region_a": "AA",
+      "county": "Addis Ababa Zone 1",
+      "county_gid": "whosonfirst:county:1108695109",
+      "county_a": "ON",
+      "locality": "Addis Ababa",
+      "locality_gid": "whosonfirst:locality:421170391",
+      "continent": "Africa",
+      "continent_gid": "whosonfirst:continent:102191573",
+      "label": "Arat Kilo, Addis Ababa, Ethiopia",
+      "addendum": {
+        "osm": {
+          "operator": "Addis Ababa Bus Service Enterprise"
+        }
+      }
+    }
+  }
+  
