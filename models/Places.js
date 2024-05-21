@@ -11,6 +11,10 @@ const Places = db.define('Places', {
   properties: {
     type: DataTypes.JSONB 
   },
+  status: {
+    type: DataTypes.STRING,
+    defaultValue: 'Pending' 
+  },
 
 });
 

@@ -14,8 +14,9 @@ async function getAllPlaces(req, res) {
 // Controller function to create a new place
 async function createPlace(req, res) {
   const { userId, coordinates, properties } = req.body;
+  const status = 'Pending'
   try {
-    const newPlace = await Places.create({ userId, coordinates, properties });
+    const newPlace = await Places.create({ userId, coordinates, properties, status });
     res.status(201).json(newPlace);
   } catch (error) {
     console.error(error);
@@ -26,7 +27,14 @@ async function createPlace(req, res) {
 // Controller function to edit a place
 async function editPlace(req, res) {
   const { id } = req.params;
-  const { userId, coordinates, properties } = req.body;
+  const { userId, coordinates, properties, status } = req.body;
+  let statusValue;
+  if (status != null || status != ''){
+    statusValue = status
+  }
+  else{
+    statusValue = 'Pending'
+  }
   try {
     let place = await Places.findByPk(id);
     if (!place) {
@@ -36,7 +44,8 @@ async function editPlace(req, res) {
       ...place.toJSON(),
       userId,
       coordinates,
-      properties
+      properties,
+      status: statusValue
     };
     await Places.update(place, { where: { id } });
     res.json(place);
